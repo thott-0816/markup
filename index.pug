@@ -1,0 +1,76 @@
+body
+  header.header
+    .header__logo
+      img.logo(src="https://demo.patternlab.io/images/logo.svg")
+    .header__menu
+      .menu
+        ul.menu__list
+          each val in ['About', 'Blog', 'Contact', 'Login']
+            li.menu__item 
+              a.menu__link(href='#')= val
+      .menu__search
+        form
+          input.search_inner(type="text" placeholder="Search in site")
+  .container
+    a.container__banner
+      .banner
+        img.banner__slogan(src="https://demo.patternlab.io/images/sample/hero-forest.jpg")
+        h2.banner__headline Track your hikes. Challenge your friends. Get out there and start exploring.
+    .container__content
+      .content
+        .content__tour
+           .tour 
+             ul.tour__list
+               each val in [['https://demo.patternlab.io/images/sample/tout-winter-hiker.jpg','Best winter hikes around the world'], ['https://demo.patternlab.io/images/sample/tout-leaves.jpg','Sign in to view your dashboard'], ['https://demo.patternlab.io/images/sample/tout-mountains.jpg','Learn about our mission']]
+                 li.tour__post 
+                   a.tour__link(href='#')
+                     img.tour__image(src= val[0])
+                     h2.tour__headline= val[1]
+        .content--two-col
+          .content__blog
+            .blog
+              h2.blog__section-title Latest From the Blog
+              ul.blog__list
+                each val in [['https://demo.patternlab.io/images/sample/blog-mtns3.jpg','Hardest Hikes in the World', 'The world delivers a multitude of daunting hikes. How difficult? We have listed some of the most strenuous hikes in the world.'], ['https://demo.patternlab.io/images/sample/blog-trees.jpg', 'How to Survive in the Woods', 'Picture yourself alone in the wilderness with only a backpack full of your belongings for 2 weeks. Here are some tips and suggestions on how to survive the hazards that Mother Nature has to offer.'], ['https://demo.patternlab.io/images/sample/blog-mtns2.jpg','Top 10 Best Locations to Hike in the U.S.', 'You do not have to travel far to explore what nature has to offer. The U.S. contains some of the best sights in the world and we have listed the 10 best for you.']]
+                  li.blog__item
+                    a.blog__item-link(href='#')
+                      img.blog__item-image(src= val[0])
+                      .blog__item-body
+                        h2.blog__item-title= val[1]
+                        p.blog__item-excerpt= val[2]
+                   
+              a.blog__view-more(href='#') View All Posts
+          .content__hiker
+            .hiker
+              h2.hiker__section-title Featured Hikers
+              ul.hiker__list
+                each val in [['https://demo.patternlab.io/images/sample/avatar1.jpg','Jimmy Stewart', 'Indiana, PA'], ['https://demo.patternlab.io/images/sample/avatar2.jpg', 'Janice Kimble', 'Los Angeles, CA'], ['https://demo.patternlab.io/images/sample/avatar3.jpg','Salvadore Dali XIV', 'Sheboygan, WI']]
+                  li.hiker__item 
+                    a.hiker__item-link(href='#')
+                      img.hiker__item-avatar(src= val[0])
+                      .hiker__item-body
+                        h2.hiker__item-name= val[1]
+                        p.hiker__item-address= val[2]
+                a.hiker__view-more(href='#') View All Hikers
+  footer
+    .footer
+      a.footer__logo(href='#')
+        img.logo(src='https://demo.patternlab.io/images/logo-footer.svg')
+      nav.footer__navigation
+        .navigation
+          ul.navigation__list
+            each val in ['About', 'Blog', 'Contact', 'Login']
+              li.navigation__item
+                a.navigation__link(href='#')= val
+      p.footer__info
+        | This is a demonstration of what's possible with 
+        a(href='http://patternlab.io') Pattern Lab
+        | . 
+        a(href='http://patternlab.io/download.html') Download Pattern Lab
+        | , check out the 
+        a(href='http://patternlab.io/docs/') documentation
+        | , or learn more about 
+        a(href='http://atomicdesign.bradfrost.com/') atomic design
+        | .
+      p.footer__copyright © 2016 HikeTracker. All rights reserved.
+
